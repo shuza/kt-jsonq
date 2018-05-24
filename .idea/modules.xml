@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JsonQ.iml" filepath="$PROJECT_DIR$/.idea/modules/JsonQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JsonQ/.idea/modules/JsonQ_main.iml" filepath="$PROJECT_DIR$/../JsonQ/.idea/modules/JsonQ_main.iml" group="JsonQ" />
+      <module fileurl="file://$PROJECT_DIR$/../JsonQ/.idea/modules/JsonQ_test.iml" filepath="$PROJECT_DIR$/../JsonQ/.idea/modules/JsonQ_test.iml" group="JsonQ" />
+    </modules>
+  </component>
+</project>
