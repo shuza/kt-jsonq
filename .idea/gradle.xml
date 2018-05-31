@@ -4,12 +4,12 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../JsonQ" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="C:/Program Files (x86)/gradle-4.5.1" />
-        <option name="gradleJvm" value="1.8" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/../JsonQ" />
+            <option value="$PROJECT_DIR$" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

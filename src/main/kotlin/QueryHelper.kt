@@ -1,46 +1,51 @@
-import com.google.gson.JsonArray
-import com.google.gson.JsonObject
-import com.google.gson.JsonParseException
-import com.google.gson.JsonParser
+import com.google.gson.*
 import exceptions.InvalidFilePathException
 import exceptions.InvalidJsonException
 import exceptions.InvalidQueryOperator
+import exceptions.InvalidQueryPathException
 import models.QueryModel
 import models.QueryOperators
-import utils.*
-import java.io.File
+import ext.*
 import java.io.FileNotFoundException
+import java.io.InputStream
 
-open class QueryHelper(filePath: String) : QueryApi {
+internal open class QueryHelper : QueryApi {
     //  store the raw json object
     internal var rawJsonData: JsonObject = JsonObject()
 
     //  store the json object in which we want to query
-    internal var queryObject: JsonArray = JsonArray()
+    internal var queryArrayObject: JsonArray = JsonArray()
 
     //  store all the conditions
     private var conditions = arrayListOf<QueryModel>()
-
-    init {
-        loadJsonFile(filePath)
-    }
 
     /**
      *  load json object from file
      *  @param  filePath     path of the file
      */
-    private fun loadJsonFile(filePath: String) {
+    constructor(inputStream: InputStream) {
         try {
-            val inputStream = File(filePath).inputStream()
             val inputString = inputStream.bufferedReader().use { it.readText() }
 
             val parser = JsonParser()
-            rawJsonData = parser.parse(inputString) as JsonObject
+            this.rawJsonData = parser.parse(inputString) as JsonObject
         } catch (e: FileNotFoundException) {
             throw InvalidFilePathException(e.message!!)
         } catch (e: JsonParseException) {
             throw InvalidJsonException(e.message!!)
         }
+    }
+
+    constructor(jsonObj: JsonObject) {
+        this.rawJsonData = jsonObj
+    }
+
+    constructor(jsonByteArray: ByteArray) {
+        this.rawJsonData = JsonParser().parse(jsonByteArray.toString()) as JsonObject
+    }
+
+    constructor(jsonString: String) {
+        this.rawJsonData = JsonParser().parse(jsonString) as JsonObject
     }
 
     /**
@@ -234,18 +239,18 @@ open class QueryHelper(filePath: String) : QueryApi {
      */
     override fun get(): JsonArray {
 
-        if (conditions.isEmpty() && queryObject != null) {
-            return queryObject!!
+        if (conditions.isEmpty() && queryArrayObject != null) {
+            return queryArrayObject!!
         }
 
         val result = JsonArray()
-        queryObject.forEach {
+        queryArrayObject.forEach {
             if (processQuery(it.asJsonObject)) {
                 result.add(it.asJsonObject)
             }
         }
 
-        queryObject = JsonArray()
+        queryArrayObject = JsonArray()
 
         return result
     }
@@ -310,5 +315,74 @@ open class QueryHelper(filePath: String) : QueryApi {
         }
 
         return sum / data.size()
+    }
+
+    /**
+     *  returns size of the result
+     */
+    override fun count(): Int {
+        return size()
+    }
+
+    /**
+     *  returns size of the result
+     */
+    override fun size(): Int {
+        return get().size()
+    }
+
+    /**
+     *  returns first element of result
+     */
+    override fun first(): JsonObject {
+        return get().get(0).asJsonObject
+    }
+
+    /**
+     *  returns last element of result
+     */
+    override fun last(): JsonObject {
+        val result = get()
+        val position = if (result.size() > 1) result.size() - 1 else 0
+        return result.get(position).asJsonObject
+    }
+
+    /**
+     *  returns n-th element of result
+     */
+    override fun nth(position: Int): JsonObject {
+        return get().get(position).asJsonObject
+    }
+
+    /**
+     *  check not Empty || not Null || not Empty Array || not Empty Object
+     */
+    override fun exists(): Boolean {
+        return get().size() > 0
+    }
+
+    /**
+     *  find nested object
+     */
+    fun find(path: String): Any {
+        val pathList = path.split(".")
+        var jsonObj = rawJsonData
+        var result: JsonElement = jsonObj.get(pathList[0])
+        for (i in 0 until pathList.size) {
+            try {
+                if (i == pathList.size - 1) {
+                    result = jsonObj.get(pathList[i])
+                } else {
+                    jsonObj = jsonObj.get(pathList[i]).asJsonObject
+                }
+            } catch (e: Exception) {
+                throw InvalidQueryPathException(path)
+            }
+        }
+        return when {
+            result.isJsonObject -> result.asJsonObject
+            result.isJsonArray -> result.asJsonArray
+            else -> result.asString
+        }
     }
 }

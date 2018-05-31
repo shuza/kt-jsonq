@@ -1,4 +1,5 @@
 import com.google.gson.JsonArray
+import com.google.gson.JsonObject
 
 interface QueryApi {
     fun orWhereEq(key: String, value: Any): QueryApi
@@ -30,5 +31,10 @@ interface QueryApi {
     fun max(key: String): Double
     fun min(key: String): Double
     fun avg(key: String): Double
-
+    fun count(): Int
+    fun size(): Int
+    fun first(): JsonObject
+    fun last(): JsonObject
+    fun nth(position: Int): JsonObject
+    fun exists(): Boolean
 }

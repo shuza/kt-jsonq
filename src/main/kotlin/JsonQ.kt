@@ -1,21 +1,55 @@
+import com.google.gson.JsonArray
+import com.google.gson.JsonObject
 import models.QueryOperators
+import java.io.InputStream
 import kotlin.properties.Delegates
 
-class JsonQ(filePath: String) {
+class JsonQ {
     private var queryHelper: QueryHelper by Delegates.notNull()
 
-    init {
-        queryHelper = QueryHelper(filePath)
+    constructor(inputStream: InputStream) {
+        queryHelper = QueryHelper(inputStream)
+    }
+
+    constructor(jsonString: String) {
+        queryHelper = QueryHelper(jsonString)
+    }
+
+    constructor(jsonObj: JsonObject) {
+        queryHelper = QueryHelper(jsonObj)
     }
 
     /**
-     *  From builds a select clause
+     *  From builds a SELECT FROM clause
      *  @param  objectKey    key of the node e.g: "users"
      */
     fun from(objectKey: String): JsonQ {
-        queryHelper.queryObject = queryHelper.rawJsonData.get(objectKey).asJsonArray
+        val result = find(objectKey)
+        if (result is JsonArray) {
+            queryHelper.queryArrayObject = result
+        } else if (result is JsonObject) {
+            val tmp = JsonArray()
+            tmp.set(0, result)
+            queryHelper.queryArrayObject = tmp
+        }
+        queryHelper.queryArrayObject = queryHelper.rawJsonData.get(objectKey).asJsonArray
         return this
     }
+
+    /**
+     *  at builds a select clause like from method
+     */
+    fun at(objectKey: String): JsonQ {
+        return from(objectKey)
+    }
+
+    fun find(path: String): Any {
+        return queryHelper.find(path)
+    }
+
+    /*fun exists(): Boolean {
+
+    }*/
 
     /**
      *  make query  SELECT * WHERE key = value
