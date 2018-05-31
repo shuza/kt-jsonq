@@ -4,6 +4,24 @@
 
 This package is inspired from the awesome [jsonq](https://github.com/nahid/jsonq) package.
 
+### Installation
+
+Gradle,
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+And
+```gradle
+dependencies {
+    implementation 'com.github.shuza:kt-jsonq:v0.1'
+}
+```
+
 # Usage
 You can start using this package right away by importing your Json data from a file:
 ```kotlin
