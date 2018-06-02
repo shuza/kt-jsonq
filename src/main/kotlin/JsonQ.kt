@@ -1,5 +1,6 @@
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import io.reactivex.Single
 import models.QueryOperators
 import java.io.InputStream
 import kotlin.properties.Delegates
@@ -46,10 +47,6 @@ class JsonQ {
     fun find(path: String): Any {
         return queryHelper.find(path)
     }
-
-    /*fun exists(): Boolean {
-
-    }*/
 
     /**
      *  make query  SELECT * WHERE key = value
@@ -158,4 +155,21 @@ class JsonQ {
         queryHelper.makeWhere(key, QueryOperators.CONTAINS, value, QueryOperators.OPERATOR_OR)
         return queryHelper
     }
+
+    fun sum(key: String) = queryHelper.sum(key)
+    fun max(key: String) = queryHelper.max(key)
+    fun min(key: String) = queryHelper.min(key)
+    fun avg(key: String) = queryHelper.avg(key)
+    fun count() = queryHelper.count()
+    fun size() = queryHelper.size()
+    fun first() = queryHelper.first()
+    fun last() = queryHelper.last()
+    fun nth(position: Int) = queryHelper.nth(position)
+    fun exists() = queryHelper.exists()
+
+    fun rxGet() = queryHelper.rxGet()
+    fun rxSum(key: String) = queryHelper.rxSum(key)
+    fun rxMax(key: String) = queryHelper.rxMax(key)
+    fun rxMin(key: String) = queryHelper.rxMin(key)
+    fun rxAvg(key: String) = queryHelper.rxAvg(key)
 }
