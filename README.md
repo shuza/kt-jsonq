@@ -1,8 +1,28 @@
 # Kt-JsonQ
+===============
+[![](https://jitpack.io/v/ninja.sakib/kotlin-jsonq.svg)](https://jitpack.io/#shuza/kt-jsonq/v0.2)
 
 **kt-jsonq** is a simple, elegant kotlin library to Query over any type of JSON Data. It'll make your life easier by giving the flavour of an ORM-like query on your JSON.
 
 This package is inspired from the awesome [jsonq](https://github.com/nahid/jsonq) package.
+
+
+
+Gradle,
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+And
+```gradle
+dependencies {
+    implementation 'com.github.shuza:kt-jsonq:v0.2'
+}
+```
 
 # Usage
 You can start using this package right away by importing your Json data from a file:
