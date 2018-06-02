@@ -4,29 +4,10 @@
 
 This package is inspired from the awesome [jsonq](https://github.com/nahid/jsonq) package.
 
-### Installation
-
-Gradle,
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url "https://jitpack.io" }
-    }
-}
-```
-And
-```gradle
-dependencies {
-    implementation 'com.github.shuza:kt-jsonq:v0.1'
-}
-```
-
 # Usage
 You can start using this package right away by importing your Json data from a file:
 ```kotlin
-val inputStream = FileInputStream(FILE_PATH)
-val jsonQ = JsonQ(inputStream)
+val jsonQ = JsonQ("data.json")
 ```
 You can start Query your data using the various query methods such as **whereEq**, **whereNull**, **whereLess**, **whereStartsWith**, **orWhereNotNull**, **orWhereGreater**, **andWhereGreaterEq**, **andWhereEndsWith** and so on. Also you can aggregate your data after query using **sum**, **max**, **min** etc.
 
@@ -109,6 +90,34 @@ println(result)
 */
 341000
 ```
+It has reactive programming support. Let's see some example
+```kotlin
+jsonq.from("users")
+            .whereLess("id", 3)
+            .rxGet()
+            .subscribe(object : SingleObserver<JsonArray> {
+                override fun onSuccess(t: JsonArray) {
+                    println(t)
+                }
+
+                override fun onSubscribe(d: Disposable) {}
+
+                override fun onError(e: Throwable) {
+                    println(e.message)
+                }
+            })
+
+/****   It will print   ******/
+[{
+	"id": 1,
+	"name": "Johura Akter Sumi",
+	"location": "Barisal"
+}, {
+	"id": 2,
+	"name": "Mehedi Hasan Nahid",
+	"location": "Barisal"
+}]
+```
 cool, huh?
 
 Let's explore the full API to see what else magic this library can do for you. Shall we?
@@ -128,8 +137,9 @@ Following API examples are shown based on the sample JSON data given [here](http
 * [whereStartsWith]()
 * [whereEndsWith]()
 * [whereContains]()
-* [orWhereEq]()
-* [andWhereEq]()
+* [or]()
+* [and]()
+* [rx]()
 * [get]()
 * [sum]()
 * [max]()
