@@ -4,10 +4,29 @@
 
 This package is inspired from the awesome [jsonq](https://github.com/nahid/jsonq) package.
 
+### Installation
+
+Gradle,
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+And
+```gradle
+dependencies {
+    implementation 'com.github.shuza:kt-jsonq:v0.1'
+}
+```
+
 # Usage
 You can start using this package right away by importing your Json data from a file:
 ```kotlin
-val jsonQ = JsonQ("data.json")
+val inputStream = FileInputStream(FILE_PATH)
+val jsonQ = JsonQ(inputStream)
 ```
 You can start Query your data using the various query methods such as **whereEq**, **whereNull**, **whereLess**, **whereStartsWith**, **orWhereNotNull**, **orWhereGreater**, **andWhereGreaterEq**, **andWhereEndsWith** and so on. Also you can aggregate your data after query using **sum**, **max**, **min** etc.
 
