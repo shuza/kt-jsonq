@@ -1,5 +1,8 @@
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import io.reactivex.Observable
+import io.reactivex.Single
+import io.reactivex.SingleObserver
 
 interface QueryApi {
     fun orWhereEq(key: String, value: Any): QueryApi
@@ -37,4 +40,10 @@ interface QueryApi {
     fun last(): JsonObject
     fun nth(position: Int): JsonObject
     fun exists(): Boolean
+
+    fun rxGet(): Single<JsonArray>
+    fun rxSum(key: String): Single<Double>
+    fun rxMax(key: String): Single<Double>
+    fun rxMin(key: String): Single<Double>
+    fun rxAvg(key: String): Single<Double>
 }

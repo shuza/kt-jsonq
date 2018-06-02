@@ -6,6 +6,9 @@ import exceptions.InvalidQueryPathException
 import models.QueryModel
 import models.QueryOperators
 import ext.*
+import io.reactivex.Observable
+import io.reactivex.Single
+import io.reactivex.SingleObserver
 import java.io.FileNotFoundException
 import java.io.InputStream
 
@@ -83,7 +86,6 @@ internal open class QueryHelper : QueryApi {
      *  @param  obj                 is the json makeWhere condition will be tested
      *  @param  query               individual condition that will be tested
      *  @param  previousResult      result of the previous tested condition if any otherwise true
-     *  @param  previousCondition   previous condition if necessary for this condition e.g: AND, OR
      *
      *  @return     true or false
      */
@@ -384,5 +386,25 @@ internal open class QueryHelper : QueryApi {
             result.isJsonArray -> result.asJsonArray
             else -> result.asString
         }
+    }
+
+    override fun rxGet(): Single<JsonArray> {
+        return Single.fromCallable { get() }
+    }
+
+    override fun rxSum(key: String): Single<Double> {
+        return Single.fromCallable { sum(key) }
+    }
+
+    override fun rxMax(key: String): Single<Double> {
+        return Single.fromCallable { max(key) }
+    }
+
+    override fun rxMin(key: String): Single<Double> {
+        return Single.fromCallable { min(key) }
+    }
+
+    override fun rxAvg(key: String): Single<Double> {
+        return Single.fromCallable { avg(key) }
     }
 }
