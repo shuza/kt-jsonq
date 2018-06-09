@@ -27,7 +27,9 @@ dependencies {
 # Usage
 You can start using this package right away by importing your Json data from a file:
 ```kotlin
-val jsonQ = JsonQ("data.json")
+val filePath = "data.json"
+val inputStream = FileInputStream(filePath)
+val jsonq = JsonQ(inputStream)
 ```
 You can start Query your data using the various query methods such as **whereEq**, **whereNull**, **whereLess**, **whereStartsWith**, **orWhereNotNull**, **orWhereGreater**, **andWhereGreaterEq**, **andWhereEndsWith** and so on. Also you can aggregate your data after query using **sum**, **max**, **min** etc.
 
