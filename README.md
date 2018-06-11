@@ -20,7 +20,7 @@ allprojects {
 And
 ```gradle
 dependencies {
-    implementation 'com.github.shuza:kt-jsonq:v0.2'
+    implementation 'com.github.shuza:kt-jsonq:v1.0'
 }
 ```
 
@@ -71,7 +71,7 @@ Now let's do some query in this json data
 ```kotlin
 val result = jsonQ.from("products")
             .whereEq("cat", 2)
-            .get()
+            .build()
 println(result)
 
 /**
@@ -104,6 +104,7 @@ Let's say we want to get the Summation of price of the Queried result. We can do
 ```kotlin
 val result = jsonQ.from("products")
             .whereEq("cat", 2)
+	    .build()
             .sum("price")
 println(result)
 
@@ -116,9 +117,10 @@ It has reactive programming support. Let's see some example
 ```kotlin
 jsonq.from("users")
             .whereLess("id", 3)
-            .rxGet()
-            .subscribe(object : SingleObserver<JsonArray> {
-                override fun onSuccess(t: JsonArray) {
+	    .build()
+            .rxSum("price")
+            .subscribe(object : SingleObserver<Double> {
+                override fun onSuccess(t: Double) {
                     println(t)
                 }
 
@@ -130,15 +132,7 @@ jsonq.from("users")
             })
 
 /****   It will print   ******/
-[{
-	"id": 1,
-	"name": "Johura Akter Sumi",
-	"location": "Barisal"
-}, {
-	"id": 2,
-	"name": "Mehedi Hasan Nahid",
-	"location": "Barisal"
-}]
+433150.0
 ```
 cool, huh?
 
@@ -167,7 +161,7 @@ Following API examples are shown based on the sample JSON data given [here](http
 * [max]()
 * [min]()
 * [avg]()
-
+* [count]()
 
 ## Buds and Issues
 If you encounter any bugs or issues, feel free to [open an issue at
