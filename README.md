@@ -115,7 +115,7 @@ println(result)
 ```
 It has reactive programming support. Let's see some example
 ```kotlin
-jsonq.from("users")
+jsonq.from("products")
             .whereLess("id", 3)
 	    .build()
             .rxSum("price")
