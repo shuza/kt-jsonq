@@ -1,4 +1,4 @@
-package ext
+package com.shuza.jsonq.ext
 
 import com.google.gson.JsonObject
 

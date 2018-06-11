@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="542408d4-a0c6-408f-aa63-c8e3ff7ba5b6" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQ.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonArrayExt.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/JsonQ.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/JsonQ.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/JsonQ.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/QueryApi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidFilePathException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidFilePathException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidJsonException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidJsonException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidQueryOperator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidQueryOperator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidQueryPathException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidQueryPathException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ext/JsonExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/QueryModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/QueryOperators.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryOperators.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/JsonQTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/JsonQTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -55,48 +67,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QueryApi.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryApi.kt">
+      <file leaf-file-name="JsonQTest.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/JsonQTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="47" column="42" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="47" selection-end-column="42" />
+            <state relative-caret-position="110">
+              <caret line="100" column="33" lean-forward="true" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonArrayExt.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonArrayExt.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2080">
+              <caret line="104" column="69" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
               <folding>
-                <element signature="e#0#159#0" expanded="true" />
+                <element signature="e#29#164#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonQ.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/JsonQ.kt">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="157" selection-start-line="157" selection-end-line="157" />
+            <state relative-caret-position="20">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="QueryHelper.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="262" column="21" selection-start-line="262" selection-start-column="21" selection-end-line="262" selection-end-column="21" />
-              <folding>
-                <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-                <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
-              </folding>
+            <state relative-caret-position="100">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonQTest.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/JsonQTest.kt">
+      <file leaf-file-name="JsonQ.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQ.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1040">
+              <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -106,8 +120,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -118,8 +132,16 @@
       <find>processing</find>
       <find>find(</find>
       <find>get</find>
-      <find />
-      <find />
+      <find>fun sum(</find>
+      <find>proces</find>
+      <find>fun get(</find>
+      <find>fun get</find>
+      <find>sum</find>
+      <find>max</find>
+      <find>fun avg</find>
+      <find>fun fro</find>
+      <find>fun from</find>
+      <find>fun fin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -326,9 +348,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6109121832635" />
+        <entry key="$PROJECT_DIR$" value="6109303246434" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1617629130" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3209770405" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="1793310499" />
       </map>
@@ -541,13 +563,20 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/utils/JsonUtil.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidQueryPathException.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ext/JsonUtil.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/QueryApi.kt" />
-        <option value="$PROJECT_DIR$/src/test/resources/data.json" />
         <option value="$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/JsonQ.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonElementExt.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper_1.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQ_1.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQNew.kt" />
+        <option value="$PROJECT_DIR$/src/test/resources/data.json" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/Main.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonArrayExt.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/JsonQTest.kt" />
       </list>
     </option>
@@ -562,10 +591,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -573,9 +601,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -607,6 +632,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="jsonq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JsonQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JsonQ" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="jsonq" type="462c0819:PsiDirectoryNode" />
               <item name="ext" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -622,23 +656,19 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="JsonQ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JsonQ" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/JAVA" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -647,6 +677,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JsonQ\src\main\kotlin\com\shuza\jsonq" />
       <recent name="D:\JsonQ\src\test\resources" />
       <recent name="D:\JsonQ\src\main\resources" />
     </key>
@@ -687,13 +718,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="JsonQTest.testMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JsonQTest.testAnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JsonQ_test~1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JsonQTest" />
-      <option name="METHOD_NAME" value="testMin" />
+      <option name="METHOD_NAME" value="testAnd" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -704,13 +735,47 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="JsonQTest.testSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JsonQTest.testObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JsonQ_test~1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JsonQTest" />
-      <option name="METHOD_NAME" value="testSum" />
+      <option name="METHOD_NAME" value="testObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JsonQTest.testOr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JsonQ_test~1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JsonQTest" />
+      <option name="METHOD_NAME" value="testOr" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JsonQTest.testRxOr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JsonQ_test~1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JsonQTest" />
+      <option name="METHOD_NAME" value="testRxOr" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -737,46 +802,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MainKt (1)" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="JsonQ_main~1" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <option name="WORKING_DIRECTORY" />
-    </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="JsonQ_main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <option name="WORKING_DIRECTORY" />
-    </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true">
-      <module name="JsonQ_main~1" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <option name="WORKING_DIRECTORY" value="" />
-    </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true">
-      <module name="JsonQ_main~1" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <option name="WORKING_DIRECTORY" value="" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -800,19 +825,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Kotlin.MainKt" />
-      <item itemvalue="Kotlin.MainKt (1)" />
-      <item itemvalue="JUnit.JsonQTest.testSum" />
       <item itemvalue="JUnit.JsonQTest" />
-      <item itemvalue="JUnit.JsonQTest.testMin" />
+      <item itemvalue="JUnit.JsonQTest.testObject" />
+      <item itemvalue="JUnit.JsonQTest.testAnd" />
+      <item itemvalue="JUnit.JsonQTest.testOr" />
+      <item itemvalue="JUnit.JsonQTest.testRxOr" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.JsonQTest" />
-        <item itemvalue="JUnit.JsonQTest.testMin" />
-        <item itemvalue="JUnit.JsonQTest.testSum" />
-        <item itemvalue="Kotlin.MainKt (1)" />
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.JsonQTest.testRxOr" />
+        <item itemvalue="JUnit.JsonQTest.testOr" />
+        <item itemvalue="JUnit.JsonQTest.testAnd" />
+        <item itemvalue="JUnit.JsonQTest.testObject" />
       </list>
     </recent_temporary>
   </component>
@@ -845,7 +870,12 @@
       <workItem from="1527773489466" duration="3283000" />
       <workItem from="1527782782419" duration="2738000" />
       <workItem from="1527874264137" duration="3441000" />
-      <workItem from="1527960377545" duration="3449000" />
+      <workItem from="1527960377545" duration="6204000" />
+      <workItem from="1528529397112" duration="5018000" />
+      <workItem from="1528564953558" duration="166000" />
+      <workItem from="1528569845864" duration="2286000" />
+      <workItem from="1528652720225" duration="10781000" />
+      <workItem from="1528730998939" duration="2551000" />
     </task>
     <task id="LOCAL-00001" summary="support from byteArray, string and jsonObject">
       <created>1527784260256</created>
@@ -861,43 +891,50 @@
       <option name="project" value="LOCAL" />
       <updated>1527962266146</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test cases are added">
+      <created>1527964238406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527964238406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JsonQTest - 2018.06.03 at 00h 06m 19s.xml">
+    <history-entry file="JsonQTest_testOr - 2018.06.11 at 21h 54m 15s.xml">
+      <configuration name="JsonQTest.testOr" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JsonQTest - 2018.06.11 at 21h 54m 23s.xml">
       <configuration name="JsonQTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonQTest - 2018.06.03 at 00h 06m 53s.xml">
+    <history-entry file="JsonQTest_testOr - 2018.06.11 at 21h 55m 05s.xml">
+      <configuration name="JsonQTest.testOr" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JsonQTest_testOr - 2018.06.11 at 21h 55m 22s.xml">
+      <configuration name="JsonQTest.testOr" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JsonQTest - 2018.06.11 at 21h 55m 42s.xml">
       <configuration name="JsonQTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonQTest - 2018.06.03 at 00h 07m 02s.xml">
+    <history-entry file="JsonQTest - 2018.06.11 at 21h 57m 52s.xml">
       <configuration name="JsonQTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonQTest - 2018.06.03 at 00h 07m 12s.xml">
+    <history-entry file="JsonQTest - 2018.06.11 at 22h 01m 51s.xml">
       <configuration name="JsonQTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonQTest_testSum - 2018.06.03 at 00h 09m 42s.xml">
-      <configuration name="JsonQTest.testSum" configurationId="JUnit" />
+    <history-entry file="JsonQTest_testRxOr - 2018.06.11 at 22h 11m 52s.xml">
+      <configuration name="JsonQTest.testRxOr" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonQTest_testMin - 2018.06.03 at 00h 17m 44s.xml">
-      <configuration name="JsonQTest.testMin" configurationId="JUnit" />
+    <history-entry file="JsonQTest_testRxOr - 2018.06.11 at 22h 12m 04s.xml">
+      <configuration name="JsonQTest.testRxOr" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonQTest_testMin - 2018.06.03 at 00h 18m 05s.xml">
-      <configuration name="JsonQTest.testMin" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonQTest_testMin - 2018.06.03 at 00h 18m 31s.xml">
-      <configuration name="JsonQTest.testMin" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonQTest_testMin - 2018.06.03 at 00h 18m 55s.xml">
-      <configuration name="JsonQTest.testMin" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonQTest_testMin - 2018.06.03 at 00h 20m 07s.xml">
-      <configuration name="JsonQTest.testMin" configurationId="JUnit" />
+    <history-entry file="JsonQTest_testRxOr - 2018.06.11 at 22h 12m 51s.xml">
+      <configuration name="JsonQTest.testRxOr" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57929000" />
+    <option name="totallyTimeSpent" value="81486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -917,7 +954,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23279649" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23279649" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.329429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -925,28 +962,28 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967105" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3990461" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.3290938" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32750398" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Gradle" order="8" weight="0.32980332" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22919819" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -956,7 +993,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967105" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32894737" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -974,116 +1011,66 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="support from byteArray, string and jsonObject" />
     <MESSAGE value="RxJava support added" />
-    <option name="LAST_COMMIT_MESSAGE" value="RxJava support added" />
+    <MESSAGE value="Test cases are added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test cases are added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQ.kt</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="26" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6578">
-          <caret line="299" column="26" selection-start-line="299" selection-start-column="26" selection-end-line="299" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-            <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryApi.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryModel.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryOperators.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5280">
-          <caret line="240" column="32" lean-forward="true" selection-start-line="240" selection-start-column="32" selection-end-line="240" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-            <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/JsonQ.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2772">
-          <caret line="126" column="1" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryOperators.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryOperators.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ext/JsonExt.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonExt.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryApi.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryApi.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1848">
           <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
-            <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-            <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
+            <element signature="n#!!block;n#testCondition#0;n#!!block;n#QueryHelper#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryOperators.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryOperators.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
@@ -1091,7 +1078,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryModel.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
@@ -1105,13 +1092,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
           <folding>
-            <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-            <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
+            <element signature="n#!!block;n#testCondition#0;n#!!block;n#QueryHelper#0" />
           </folding>
         </state>
       </provider>
@@ -1127,14 +1113,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidJsonException.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidJsonException.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="77" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidFilePathException.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidFilePathException.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
@@ -1163,13 +1149,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/utils/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="22" selection-start-column="22" selection-end-column="22" />
           <folding>
-            <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-            <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
+            <element signature="n#!!block;n#testCondition#0;n#!!block;n#QueryHelper#0" />
           </folding>
         </state>
       </provider>
@@ -1181,14 +1166,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/QueryOperators.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryOperators.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
@@ -1209,14 +1187,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidQueryOperator.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidQueryOperator.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/exceptions/InvalidQueryPathException.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/exceptions/InvalidQueryPathException.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
@@ -1237,13 +1215,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.8/cc52b0e12d62f0a0fa6b266ebe66a4183798a1c2/rxjava-2.1.8-sources.jar!/io/reactivex/SingleObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1251,72 +1223,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryApi.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        <state relative-caret-position="501">
+          <caret line="47" column="42" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="47" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryHelper.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="262" column="21" selection-start-line="262" selection-start-column="21" selection-end-line="262" selection-end-column="21" />
+        <state relative-caret-position="61">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonElementExt.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/models/QueryModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="66" lean-forward="true" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQ.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3080">
+          <caret line="158" selection-start-line="149" selection-start-column="4" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="15" />
           <folding>
-            <element signature="n#!!block;n#makeWhere#0;n#!!block;n#QueryHelper#0" />
-            <element signature="n#!!block;n#processQuery#0;n#!!block;n#QueryHelper#0" />
+            <element signature="n#!!block;n#testCondition#0;n#!!block;n#QueryHelper#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/JsonQ.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/gson-2.8.2.jar!/com/google/gson/JsonArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+          <folding>
+            <element signature="e#2475#2476#0" expanded="true" />
+            <element signature="e#2531#2532#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ext/JsonExt.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/QueryHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="100">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/QueryApi.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="47" column="42" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="47" selection-end-column="42" />
+        <state relative-caret-position="100">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding>
-            <element signature="e#0#159#0" expanded="true" />
+            <element signature="e#25#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/JsonQ.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/shuza/jsonq/ext/JsonArrayExt.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        <state relative-caret-position="2080">
+          <caret line="104" column="69" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
+          <folding>
+            <element signature="e#29#164#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/JsonQTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="100" column="33" lean-forward="true" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
         </state>
       </provider>
     </entry>
