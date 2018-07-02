@@ -6,6 +6,17 @@ import com.shuza.jsonq.ext.*
 import com.shuza.jsonq.models.QueryModel
 import com.shuza.jsonq.models.QueryOperators
 
+/**
+ *
+ * :=  created by:  Shuza
+ * :=  create date:  28-Jun-18
+ * :=  (C) CopyRight Shuza
+ * :=  www.shuza.ninja
+ * :=  shuza.sa@gmail.com
+ * :=  Fun  :  Coffee  :  Code
+ *
+ **/
+
 class QueryHelper{
     /**
      *  processQuery will take JsonObject and test with all the query conditions
