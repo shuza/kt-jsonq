@@ -10,6 +10,17 @@ import com.shuza.jsonq.models.QueryOperators
 import java.io.FileNotFoundException
 import java.io.InputStream
 
+/**
+ *
+ * :=  created by:  Shuza
+ * :=  create date:  28-Jun-18
+ * :=  (C) CopyRight Shuza
+ * :=  www.shuza.ninja
+ * :=  shuza.sa@gmail.com
+ * :=  Fun  :  Coffee  :  Code
+ *
+ **/
+
 class JsonQ {
     //  raw data to query
     private var jsonObj = JsonObject()
