@@ -6,6 +6,16 @@ import com.shuza.jsonq.models.QueryModel
 import io.reactivex.Single
 
 /**
+ * :=  created by:  Shuza
+ * :=  create date:  04-Jul-18
+ * :=  (C) CopyRight Shuza
+ * :=  www.shuza.ninja
+ * :=  shuza.sa@gmail.com
+ * :=  Fun  :  Coffee  :  Code
+ **/
+
+
+/**
  *  iterate through JsonArray and test conditions
  *  returns result that satisfied conditions
  */
